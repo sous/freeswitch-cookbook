@@ -17,8 +17,8 @@ git '/opt/debs/freeswitch-precise' do
   action :sync
 end
 
-execute 'apt-key add /opt/debs/freeswitch-precise/gpg-pub.gpg' do
-  command 'cat /opt/debs/freeswitch-precise/gpg_pub.gpg | apt-key add -'
+execute 'apt-key add /opt/debs/freeswitch-precise/apt-key.gpg' do
+  command 'cat /opt/debs/freeswitch-precise/apt-key.gpg | apt-key add -'
 end
 
 include_recipe 'apt'
